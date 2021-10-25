@@ -1,17 +1,22 @@
 <template>
     <div class="footer-container">
     </div>
-    <div class="wide-container-of-clothes-add-box">
+    <div @click="$emit('add-clothes-modal')" class="wide-container-of-clothes-add-box">
         <div class="add-clothes-sign-container">
             <i class="fas fa-plus"></i>
         </div>
     </div>
-    
+    <ModalAddClothes />
 </template>
 
 <script>
+import ModalAddClothes from "./ModalAddClothes.vue";
+
 export default {
     name : "Footer",
+    components : {
+        ModalAddClothes,
+    }
 }
 </script>
 
